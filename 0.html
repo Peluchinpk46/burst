@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+
+        /* Estilos para ocultar elementos al imprimir */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #miContenedor, #miContenedor * {
+                visibility: visible;
+            }
+            #miContenedor {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+            
+
+        #miContenedor1 {
+    width: auto;
+    margin: auto;
+    background-color: #87FF7E;
+    padding: 5px;
+  }
+
+        #miContenedor {
+    width: 20%;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+        
+        .btn-pagar{
+            border: 2px solid green; 
+            background-color: #f2f2f2;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .e{
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .e a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .e a:hover {
+            background-color: #666;
+        }
+        .dropdown:hover .e {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="300" height="120"></center></div>
+         
+
+
+        
+    </div>
+    
+                        <ul style="display: auto; justify-content: space-between;">
+    <li><a href="pag.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li class="dropdown">
+                <a href="#" class="l">Herramientas digitales</a>
+                <div class="e">
+                     <a href="acerca.html">Preguntas frecuentes</a>
+                    <a href="herramientas.html">Convertidor</a>
+                   
+                </div>
+            </li>
+    <li><a href="acerca.html">Acerca de</a></li>
+    <li><a href="inicioC.html">inicio de sesion</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;"></li>
+        
+</ul>
+
+        
+    </nav>
+    <h2>Centro de compras</h2>
+    <div id="miContenedor">
+        <center>
+            <h1>Recibo de Compra</h1>
+            <h2>Casa De Materiales Reformar E Construir</h2>
+            <p>Dirección: Calle 123, Ciudad, País</p>
+            <p>Artículos:</p>
+            <ul id="datos"></ul>
+            <h1><p>Total: $<span id="total">0</span></p></h1>
+            <center><p>El costo total de todos tus productos se calcula en pantalla.</p></center>
+        </center>
+    </div>
+
+    <div><a href="pag.html" class="btn-pagar" onclick="limpiarCarrito()">Volver al inicio</a></div>
+    <div style="position: fixed; right: 20px; bottom: 20px;">
+        <div><a class="btn-pagar" onclick="window.print()">Imprimir</a>
+            <button class="btn-pagar"  id="descargarBoton">Descargar</button></div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            recuperarDatos();
+        }
+
+        function recuperarDatos() {
+            // Recuperar los datos del almacenamiento local
+            var carritoJSON = localStorage.getItem("carrito");
+
+            // Convertir la cadena JSON a un objeto
+            var carrito = JSON.parse(carritoJSON);
+
+            // Mostrar los datos en la página
+            var datos = document.getElementById("datos");
+            var total = 0;
+            carrito.forEach(item => {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(item.producto + ' - $' + item.precio));
+                datos.appendChild(li);
+                total += item.precio;
+            });
+            document.getElementById("total").innerHTML = total;
+        }
+
+        function limpiarCarrito() {
+            localStorage.removeItem("carrito");
+        }
+        document.getElementById("descargarBoton").addEventListener("click", function() {
+            const contenidoParaDescargar = document.getElementById("miContenedor").outerHTML;
+            const blob = new Blob([contenidoParaDescargar], { type: "text/html" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "recibo_de_compra.html";
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+    </script>
+
+
+  </center>
+</div>
+.
+<footer>
+    <div class="header">
+    <h4>Contactanos</h4>
+</div>
+    <p>Correo:</p> contacto@materialeseconstruir.com</p>
+    <p>¡LLÁMANOS! tel: 55 3397 4519 / 55-3584 1011</p>
+</div>
+
+<div class="footer">
+    <p>vamos a ayudar a materializar cientos de obras como la tuya.</p>
+    <p>Sin importar el tamaño de su proyecto, en nosotros siempre encontrarás un aliado para asesorarte y darte los mejores precios.</p><br><br>
+
+        <p>Casa De Materiales © 2024 ReformarEconstruir.com</p>
+    </footer>
+
+</body>
+</html>

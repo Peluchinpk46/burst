@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MATERIA respuesta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        .nav-item {
+            list-style: none;
+        }
+        .nav-item a {
+            text-decoration: none;
+            color: black;
+        }
+        .contact-info {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+        }
+              .faq-section {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .question {
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .question::after {
+            content: '⬇️';
+            position: absolute;
+            right: 10px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 5px;
+            border: 1px solid black;
+            background-color: white;
+            padding: 10px;
+        } 
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+         /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+   .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .e{
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .e a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .e a:hover {
+            background-color: #666;
+        }
+        .dropdown:hover .e {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="300" height="120"></center></div>
+         
+
+
+        
+    </div>
+    
+                        <ul style="display: auto; justify-content: space-between;">
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li class="dropdown">
+                <a href="#" class="l">Herramientas digitales</a>
+                <div class="e">
+                     <a href="acerca.html">Preguntas frecuentes</a>
+                    <a href="converciones.html">Convertidor</a>
+                   
+                </div>
+            </li>
+    <li><a href="acerca.html">Acerca de</a></li>
+    <li><a href="inicioC.html">inicio de sesion</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;"></li>
+        
+</ul>
+
+        
+    </nav>
+</header>
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer1')">1-¿Qué tipos de materiales ofrecen?</div>
+    <div class="answer" id="answer1"><p>Ofrecemos una amplia gama de materiales para construcción,</p> incluyendo cemento, ladrillos, aceros, acabados y más.</div>
+</div>
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer2')">2-¿Cómo puedo solicitar un presupuesto?</div>
+    <div class="answer" id="answer2"><p>Puedes solicitar un presupuesto contactándonos directamente por teléfono o correo electrónico.</div>
+</div>
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer3')">3-¿Tienen una cantidad mínima de pedido?</div>
+    <div class="answer" id="answer3"><p>No exigimos una cantidad mínima de pedido, puedes comprar la cantidad que necesites.</div>
+</div>
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer4')">4-¿Cómo puedo devolver o cambiar un material si no es lo que necesito?</div>
+    <div class="answer" id="answer4"><p>Aceptamos devoluciones y cambios dentro de los 30 días</p> posteriores a la compra, siempre que el material esté en su estado original.</div>
+</div>
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer5')">5-¿Qué garantías ofrecen sobre sus materiales?</div>
+    <div class="answer" id="answer5"><p>Todos nuestros materiales están garantizados contra defectos</p> de fabricación por un período mínimo de un año.</div>
+</div>
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer6')">6-¿Cómo puedo obtener asesoramiento técnico sobre los materiales?</div>
+    <div class="answer" id="answer6"><p>Contamos con un equipo de expertos que puede brindarte asesoramiento técnico personalizado.</p> Puedes contactarlos a través de nuestra sección de contacto.</div>
+</div>
+
+
+<div class="faq-section">
+    <div class="question" onclick="toggleAnswer('answer7')">7-¿Quienes visitan nuestra pagina?</div>
+    <div class="answer" id="answer7"><h4>Profesionales de la construcción:</h4>
+        <p> como arquitectos, ingenieros y contratistas que buscan materiales para sus proyectos.</p><br>
+    <h4>Trabajadores de la construcción:</h4>
+        <p> que necesitan comprar herramientas o materiales específicos para su trabajo diario.</p><br>
+    <h4>Propietarios de viviendas:</h4>
+        <p> que están realizando proyectos de mejora del hogar o reparaciones y necesitan materiales.</p><br>
+    <h4>Estudiantes y académicos:</h4>
+        <p> que buscan información para proyectos educativos o investigaciones relacionadas con la construcción y los materiales.</p><br>
+    <h4>Empresas:</h4>
+        <p> que pueden necesitar materiales a granel para grandes proyectos o para el mantenimiento de sus instalaciones.</p></div>
+</div><br><br><br><br><br><br>
+<br><br><center><aside><img src="atardecer2.avif" width="1300" height="300"></aside></center><br>
+<br><br><br><br><br><br>
+
+
+<script>
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        if (answer.style.display === 'none') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+<footer>
+    <div class="header">
+    <h4>Contactanos</h4>
+</div>
+    <p>Correo:</p> contacto@materialeseconstruir.com</p>
+    <p>¡LLÁMANOS! tel: 55 3397 4519 / 55-3584 1011</p>
+</div>
+
+<div class="footer">
+    <p>vamos a ayudar a materializar cientos de obras como la tuya.</p>
+    <p>Sin importar el tamaño de su proyecto, en nosotros siempre encontrarás un aliado para asesorarte y darte los mejores precios.</p><br><br>
+
+        <p>Casa De Materiales © 2024 ReformarEconstruir.com</p>
+    </footer>
+</html>

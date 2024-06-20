@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+
+        .product {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        .btn-agregar {
+            border: 2px solid green; 
+            background-color: white;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        
+        .cart {
+            position: fixed;
+            background-color: white;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #000;
+            padding: 10px;
+            display: none; /* ocultar inicialmente */
+        }
+        .nav {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 1px;
+            padding: 1px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: #ddd;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .btn-finalizar{
+            border: 2px solid green; 
+            background-color: white;   
+            color: green; 
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+        }
+
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .e{
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .e a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .e a:hover {
+            background-color: #666;
+        }
+        .dropdown:hover .e {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="300" height="120"></center></div>
+         
+
+
+        
+    </div>
+    
+                        <ul style="display: auto; justify-content: space-between;">
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li class="dropdown">
+                <a href="#" class="l">Herramientas digitales</a>
+                <div class="e">
+                     <a href="acerca.html">Preguntas frecuentes</a>
+                    <a href="converciones.html">Convertidor</a>
+                   
+                </div>
+            </li>
+    <li><a href="acerca.html">Acerca de</a></li>
+    <li><a href="inicioC.html">inicio de sesion</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;"></li>
+        
+</ul>
+
+        
+    </nav>     <h2>Aceros</h2>
+</header>
+
+<main>
+    <!-- Sección de Categorías -->
+    <section id="categories">
+        
+        <div class="product">
+           <img src="varrilla1.jpg" alt="Producto 26" width="250" height="250">
+            <h2>VARILLA 6000</h2>
+            <p>Varilla de acero Corrugada Grado 6000</p><p>6 mts Venta por Pza /  Kg.<br>
+
+* 5/16<br>
+* 1/4<br>
+* 3/16<br>
+* 5/32</p>
+               <center> <h2>$34.49 – IVA Incluido</h2><br><br>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('Varilla 6000', 'varrilla1.jpg', 'Varilla de acero Corrugada Grado 6000', 34.49)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="varilla2.jpg" alt="Producto 19" width="250" height="250">
+          <h2>VARILLA CORRUGADA</h2>
+            <p>Varilla grado 42 de acero</p><p>Veta por Kg.<br>
+
+Diametros:<br>
+
+* 3/8″<br>
+* 1/2″<br>
+* 5/8″<br>
+* 3/4″<br>
+* 1″<br>
+* 1 1/4″<br>
+1 1/2″</p>
+               <center> <h2>$18.98 IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('VARILLA CORRUGADA', 'varilla2.jpg', 'Varilla grado 42 de acero', 18.98)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="regla1.jpg" alt="Producto 20"width="250" height="250">
+           <h2>REGLA METÁLICA</h2>
+           <p>Regla de acero</p><p>* Presentación: Cal. 20.</p>
+          <center> <h2>$675.89 IVA Incluido</h2><br><br><br><br><br><br>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('REGLA METÁLICA<', 'regla1.jpg', 'Regla de acero', 675.89)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="malla1.jpg" alt="Producto 21"width="250" height="250">
+           <h2>MALLA PLAFONERA</h2>
+           <p>Malla Plafonera hexagonal Deacero.</p><p>* Presentación: Rollo.</p>
+           <center><h2>$569.17 IVA Incluido</h2><br><br><br><br><br><br>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('MALLA PLAFONERA', 'malla1.jpg', 'Malla Plafonera hexagonal Deacero.', 569.17)">Agregar al carrito</a></center>
+       </div>
+       
+    
+    </section>
+    <section id="categories">
+        
+        <div class="product">
+           <img src="malla2.jpg" alt="Producto 22" width="250" height="250">
+            <h2>MALLA HEXAGONAL</h2>
+            <p>Material de construcción</p><p>* Presentación: Rollo.</p>
+               <center> <h2>$1,707.52 IVA Incluido</h2><br><br><br><br><br>
+            <a href="#" class="btn-agregar" onclick="agregarAlCarrito('MALLA HEXAGONAL', 'malla2.jpg', 'Material de construcción', 1707.52)">Agregar al carrito</a></center>
+       </div>
+       
+      <div class="product">
+           <img src="malla3.jpg" alt="Producto 23" width="250" height="250">
+          <h2>MALLA ELECTROSOLDADA</h2>
+            <p>Material de Construcción.</p><p>Rollos de 2.5m de ancho x 40m de largo en todos los diseños.<br>
+
+Venta por rollo.<br>
+
+Disponible en Medidas:<br>
+
+* 66 10 10<br>
+* 66 44<br>
+* 66 66<br>
+* 66 88</p>
+               <center> <h2>$1,920.96 – IVA Incluido</h2>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('MALLA ELECTROSOLDADA', 'malla3.jpg', 'Material de Construcción.', 1920.96)">Agregar al carrito</a></center>
+       </div>
+       <div class="product">
+           <img src="alambron1.jpg" alt="Producto 24" width="250" height="250">
+           <h2>ALAMBRON</h2>
+           <p>Alambron de acero.</p><p>Venta por Kg.</p>
+          <center> <h2>$22.52 IVA Incluido</h2><br><br><br><br><br>
+           <a href="#" class="btn-agregar" onclick="agregarAlCarrito('ALAMBRON', 'alambron1.jpg', 'Alambron de acero.', 22.52)">Agregar al carrito</a></center>
+
+       </div>
+       <div class="product">
+    <img src="alambre1.jpg" alt="Producto 25" width="250" height="250">
+    <h2>ALAMBRE RECOCIDO</h2>
+    <p>Alambre de acero.</p><p>Venta por Kg.</p>
+
+    <center><h2>$24.35 IVA Incluido</h2><br><br><br><br>
+    <a href="#" class="btn-agregar" onclick="agregarAlCarrito('ALAMBRE RECOCIDO', 'alambre1.jpg', 'Alambre de acero.', 24.35)">Agregar al carrito</a></center>
+</div>
+
+<img id="floating-button" onclick="toggleCarrito()" src="carrito.png" alt="Carrito de compras" style="width: 70px; height: 70px;">
+
+<div class="cart" id="carrito" style="width: 25%; margin: auto; overflow-y: auto; max-height: 500px;">
+    <button class="close" onclick="closeCart()">×</button>
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-list"></ul>
+    <div id="miContenedor"><p><h4>Total: $<span id="total">0</span></p></h4>
+    <a href="11.html" class="btn-finalizar" onclick="recuperarDatos()">Finalizar pedido</a>
+</div>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarAlCarrito(producto, imagen, descripcion, precio) {
+    carrito.push({ producto, imagen, descripcion, precio, cantidad: 1 });
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const carritoList = document.getElementById('carrito-list');
+    const totalElement = document.getElementById('total');
+    
+    carritoList.innerHTML = '';
+    
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.textAlign = "center";
+        li.innerHTML = '<img src="' + item.imagen + '" alt="' + item.producto + '" style="width:70px;height:70px; max-width: 100%;"><br>' + item.producto + ' - ' + item.descripcion + ' - $' + item.precio * item.cantidad +
+        '<br><div><button onclick="disminuir(' + index + ')">-</button>' +
+        '<span id="contador' + index + '">' + item.cantidad + '</span>' +
+        '<button onclick="aumentar(' + index + ')">+</button></div>' +
+        '<br><button onclick="quitarProducto(' + index + ')" style="display:block; margin:auto;">Quitar producto</button>';
+        carritoList.appendChild(li);
+        total += item.precio * item.cantidad;
+    });
+
+    totalElement.textContent = total;
+    
+    // Guardar los datos del carrito en el almacenamiento local
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function aumentar(index) {
+    carrito[index].cantidad++;
+    actualizarCarrito();
+}
+
+function disminuir(index) {
+    if (carrito[index].cantidad > 1) {
+        carrito[index].cantidad--;
+    } else {
+        carrito.splice(index, 1);
+    }
+    actualizarCarrito();
+}
+
+function quitarProducto(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+}
+
+function toggleCarrito() {
+    const cartDisplay = document.getElementById('carrito');
+    if (cartDisplay.style.display === 'block') {
+        cartDisplay.style.display = 'none';
+    } else {
+        cartDisplay.style.display = 'block';
+    }
+}
+
+function closeCart() {
+    document.getElementById("carrito").style.display = "none";
+}
+
+// Actualizar el carrito al cargar la página
+window.onload = actualizarCarrito;
+</script>
+
+<style>
+#floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+</style>
+</div>
+    </section>
+    
+    
+
+<footer>
+    <div class="header">
+    <h4>Contactanos</h4>
+</div>
+    <p>Correo:</p> contacto@materialeseconstruir.com</p>
+    <p>¡LLÁMANOS! tel: 55 3397 4519 / 55-3584 1011</p>
+</div>
+
+<div class="footer">
+    <p>vamos a ayudar a materializar cientos de obras como la tuya.</p>
+    <p>Sin importar el tamaño de su proyecto, en nosotros siempre encontrarás un aliado para asesorarte y darte los mejores precios.</p><br><br>
+
+        <p>Casa De Materiales © 2024 ReformarEconstruir.com</p>
+    </footer>
+
+</body>
+</html>
