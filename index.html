@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales de Construcción</title>
+    <style>
+       
+
+        .category-item
+        {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .product {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        .btn-agregar {
+    border: 2px solid green; 
+    background-color: white; 
+    color: green; 
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+        
+        .cart {
+            position: fixed;
+            background-color: white;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #000;
+            padding: 10px;
+            display: none; /* ocultar inicialmente */
+        }
+        .nav {
+            display: inline-block;
+            border: 1px solid #ccc;
+            margin: 1px;
+            padding: 1px;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 1px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+        }
+        footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  color: #5c5c5c;
+}
+.div{
+
+}
+
+.discount-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .discount-box {
+            border: 2px solid #f00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .discount-box h2 {
+            margin: 0;
+            color: #f00;
+        }
+
+        .discount-box p {
+            margin: 10px 0;
+        }
+        /* Estilos básicos */
+        body { font-family: Arial, sans-serif; }
+        nav { background-color: #010935; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav ul li a { color: white; text-decoration: none; }
+        #search-bar { margin: 20px 0; }
+        #categories { display: flex; justify-content: space-around; padding: 20px; }
+        .category-item { text-align: center; }
+    .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .e{
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .e a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .e a:hover {
+            background-color: #666;
+        }
+        .dropdown:hover .e {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <!-- Barra de Búsqueda -->
+            
+            <div><center><img src="reformar.jpg" width="300" height="120"></center></div>
+         
+
+
+        
+    </div>
+    
+                        <ul style="display: auto; justify-content: space-between;">
+    <li><a href="index.html">Principal</a></li>
+    <li><a href="pag4.html">Acabados</a></li>
+    <li><a href="pag6.html">Aceros</a></li>
+    <li><a href="paguina11.html">Cementos</a></li>
+    <li><a href="pag5.html">Herramientas de construcción</a></li>
+    <li><a href="pag3.html">Materiales de construcción</a></li>
+    <li class="dropdown">
+                <a href="login.html" class="l">Herramientas digitales</a>
+                <div class="e">
+                     <a href="login1.html">Preguntas frecuentes</a>
+                    <a href="login2.html">Convertidor</a>
+                   
+                </div>
+            </li>
+    <li><a href="acerca.html">Acerca de</a></li>
+    <li><a href="registro.php">Registro</a></li>
+    <li id="search-bar" style="display: fixe;"  style="margin-left: auto;"></li>
+        
+</ul>
+
+        
+    </nav>
+     <h2>Materiales de construcción Categorías</h2>
+
+     <div class="discount-container">
+    <div class="discount-box">
+        <h2>¡Gran Descuento!</h2>
+        <p>¡Aprovecha un 20% de descuento en este producto!</p>
+        <!-- Aquí puedes colocar la imagen del producto -->
+        <img src="ruta-a-tu-imagen.jpg" alt="Imagen del Producto" width="200">
+    </div>
+</div>s
+</header>
+
+<main>
+    <!-- Sección de Categorías -->
+    <section id="categories">
+        <div class="category-item">
+            <a href="pag4.html">
+    <img src="acabados.jpg" alt="Acabados" width="200" height="200">
+            <h3>Acabados</h3>
+        </div>
+        <div class="category-item">
+            <a href="pag6.html">
+            <img src="aceros.webp" alt="Aceros" width="200" height="200">
+            <h3>Aceros</h3>
+        </div>
+        <div class="category-item">
+            <a href="paguina11.html">
+            <img src="cemento.png" alt="Cementos" width="200" height="200">
+            <h3>Cementos</h3>
+        </div>
+        <div class="category-item">
+            <a href="pag5.html">
+            <img src="herramientas.jpg" alt="Herramientas de construcción" width="200" height="200">
+            <h3>Herramientas</h3>
+            <h3>de construcción</h3>
+        </div>
+        <div class="category-item">
+            <a href="pag3.html">
+            <img src="materiales.jpg" alt="Materiales de construcción" width="200" height="200">
+            <h3>Materiales</h3>
+            <h3>de construcción</h3>
+
+        </div>
+
+
+    </section>
+    
+</main>
+<div class="" style="text-align:center">
+        
+            <h1 style="color:#000000">¿Quiénes somos?</h1>
+<p style="color:#000000">Reformar E Construir es la red de distribución de materiales para construcción de mayor cobertura en México y con presencia en Latinoamérica. Fue creada con el objetivo de unificar las fuerzas de sus distribuidores para estar más cerca del mercado de la Construcción.</p>
+</div><br><br>
+
+<center><aside><img src="atardecer2.avif" width="1300" height="250"></aside></center>
+<footer><br><br>
+    <!-- Aquí puedes agregar un pie de página si es necesario -->
+    
+  <div class="header">
+    <h4>Contactanos</h4>
+</div>
+    <p>Correo:</p> contacto@materialeseconstruir.com</p>
+    <p>¡LLÁMANOS! tel: 55 3397 4519 / 55-3584 1011</p>
+</div>
+
+<div class="footer">
+    <p>vamos a ayudar a materializar cientos de obras como la tuya.</p>
+    <p>Sin importar el tamaño de su proyecto, en nosotros siempre encontrarás un aliado para asesorarte y darte los mejores precios.</p><br><br>
+
+        <p>Casa De Materiales © 2024 ReformarEconstruir.com</p>
+</footer>
+
+</body>
+</html>
